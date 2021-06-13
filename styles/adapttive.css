@@ -1,0 +1,46 @@
+@media only screen and (max-width: 900px){
+  body {
+    width: 900px;
+  } 
+  .header {
+    width: 900px;
+  }
+  .main-content {
+    height: 1393px;
+    width: 900px;
+  }
+  .about {
+    display: block;
+    padding: 51px 71px 0px 67px;
+  }
+  .image-tablet {
+    display: block;
+  }
+  .image-desktop {
+    display: none;
+  }
+  .about__text {
+    padding-left: 0px;
+  }
+  hr {
+    width: 462px;
+    height: 4px;
+  } 
+  .portfolio {
+    padding: 72px 0 0 67px;
+  }
+  .foto-cards img {
+    width: 180px;
+    height: 180px;
+  }
+  .footer-content {
+    width: 900px;
+  }
+  .contacts {
+    padding: 37px 289px 30px 288px;
+  }
+  .footer__end {
+    width: 900px;
+  }
+  
+}
