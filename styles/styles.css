@@ -1,6 +1,4 @@
-@import url(./adapttive.css);
 @import url(./variables.css);
-
 body {
   padding: 0;
   margin: 0;
@@ -32,11 +30,16 @@ body {
   padding: 51px 175px 0px 227px;
 
 }
-.image-tablet {
+.image__tablet {
   display: none;
 }
+.image__mobile {
+  display: none;
+}
+.image__desktop {
+  padding-right: 68px;
+}
 .about__text {
-  padding-left: 68px;
   color: var(--white-color);
 }
 .about__text h3{
@@ -70,7 +73,7 @@ hr {
   color: var(--white-color);
   margin-bottom: 30px;
 }
-.button_contact-me {
+.open-modal {
   width: 293px;
   height: 50px;
   border: 2px solid var(--white-color);
@@ -83,6 +86,87 @@ hr {
   text-transform: uppercase;
   color: var(--white-color);
   background-color: var(--black-color);
+}
+.modal {
+  position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+  opacity: 0;
+	visibility: hidden;
+	transform: scale(1.1);
+	transition: visibility 0s linear 0.25s, 
+				opacity 0.25s 0s,
+				transform 0.25s;
+}
+.modal-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color:#272A2F;
+	width: 570px;
+  padding: 49px 45px 49px 44px;
+}
+
+.modal h1 {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+  color: var(--white-color);
+}
+.modal p {
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: var(--white-color);
+}
+.name-input {
+  width: 195px;
+  height: 50px;
+  background: var(--modal-button-color);
+  border: none;
+  margin-right: 20px;
+  padding: 0;
+}
+.text-input {
+  width: 565px;
+  height: 219px;
+  background: var(--modal-button-color);
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 26px;
+  padding: 0;
+}
+.modal button {
+  width: 217px;
+  height: 50px;
+  border: 2px solid var(--white-color);
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  }
+.email-input {
+  width: 343px;
+  height: 50px;
+  background: var(--modal-button-color);
+  border: none;
+  padding: 0 ;
+}
+.show-modal {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.0);
+	transition: visibility 0s linear 0s, 
+				opacity 0.25s 0s,
+				transform 0.25s;
 }
 .portfolio {
   padding: 72px 175px 0 227px;
@@ -110,8 +194,10 @@ hr {
 }
 
 .footer-content {
-  height: 205px;
+  /* height: 205px; */
   background-color: var(--blue-color);
+  padding: 0;
+  margin: 0;
 }
 .contacts {
   display: flex;
@@ -133,7 +219,7 @@ hr {
   text-transform: uppercase;
   color: var(--white-color);
 }
-.footer__contacts p:nth-child(2) {
+.footer__contacts p:nth-child(2n) {
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 0.01em;
@@ -142,12 +228,164 @@ hr {
 .footer__end {
   height: 44px;
   width: 1440px;
-  background-color: #16758A;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   text-align: center;
   letter-spacing: 0.01em;
   color: rgba(255, 255, 255, 0.7);
+  background-color: #16758A;
   margin: 0;
+  padding: 0;
+}
+.footer__end p {
+  padding: 16px;
+}
+@media only screen and (max-width: 1024px) and (min-width: 600px){
+  body {
+    width: 900px;
+  } 
+  .header {
+    width: 900px;
+  }
+  .main-content {
+    height: 1393px;
+    width: 900px;
+  }
+  .about {
+    display: block;
+    padding: 51px 71px 0px 67px;
+  }
+  .image__tablet {
+    display: block;
+  }
+  .image__desktop {
+    display: none;
+  }
+  .image__mobile {
+    display: none;
+  }
+  .about__text {
+    padding-left: 0px;
+    padding-top: 65px;
+  }
+  hr {
+    width: 762px;
+    height: 4px;
+  } 
+  .portfolio {
+    padding: 20px 0 0 67px;
+  }
+  .foto-cards {
+    grid-template-columns: 180px 180px 180px 180px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+  }
+  .foto-cards img {
+    width: 180px;
+  }
+  .footer-content {
+    width: 900px;
+  }
+  .contacts {
+    padding: 37px 289px 30px 288px;
+  }
+  .footer__end {
+    width: 900px;
+  }
+  
+}
+
+@media only screen and (max-width: 500px) and (min-width: 300px){
+  body {
+    width: 375px;
+  }
+  .header {
+    width: 375px;
+  }
+  .main-content {
+    width: 375px;
+    height: 1888px;
+  }
+  .about {
+    display: block;
+    padding: 50px 17px 0px 17px;
+    margin: 0;
+    /* text-align: justify; */
+  }
+  .image {
+    width: 341px;
+    height: 355px;
+  }
+  .image__tablet {
+    display: none;
+  }
+  .image__desktop {
+    display: none;
+  }
+  .image__mobile {
+    display: block;
+  }
+  .about__text {
+    width: 341px;
+    padding-top: 62px;
+  }
+  hr {
+    width: 341px;
+  }
+  .open-modal {
+    width: 341px;
+  }
+  .modal-content {
+    width: 350px;
+    padding: 15px;
+  }
+  .modal h1 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .modal p {
+    font-size: 14px;
+  }
+  .name-input {
+    width: 110px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .text-input {
+    width: 340px;
+    height: 200px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+  .email-input {
+    width: 210px;
+    height: 30px;
+  }
+  .modal button {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 18px;
+    }
+  .portfolio {
+    padding: 0px 15px 0 15px;
+  }
+  .foto-cards {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+  }
+  .foto-cards img {
+    width: 165px;
+  }
+  .footer-content {
+    width: 375px;
+  }
+  .contacts {
+    padding: 37px 26px 30px 26px;
+  }
+  .footer__end {
+    width: 375px;
+  }
 }
