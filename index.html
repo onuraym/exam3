@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-  <script src="./script.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -28,20 +27,18 @@
         <h4>Curabitur blanit tempus porttitor. Vollis ac inceptos mollisestor commodo luctus.</h4>
         <p>Curabitur blandit tempus porttitor. Vollis ac inceptos mollisestor commodo luctus. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligulas semper. Cum sociis natoque penatibus et magnis maecenas. Donec ullamcorper nulla non metus auctor fringilla. </p>
         <button class="open-modal">Contact me</button>
-        <div class="modal">
+        <div class="modal-overlay">
           <div class="modal-content">
             <span class="close-btn">&times</span>
-            <div class="form">
+            <form class="form">
             <h1 class="modal__title">Contact me</h1>
             <p>Curabitur blandit tempus porttitor. Vollis ac inceptos mollisestor commodo <br> luctus. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac <br> consectetur ac, vestibulum at eros.</p>
-            <input type="text" placeholder="Your name..." class="name-input">
-            <input type="text" placeholder="Your email..." class="email-input">
-            <input type="text" class="text-input">
-            <button>Send message</button>
-          </div>
-          
-          
-          
+            <input type="text" name="name" placeholder="Your name..." class="name-input">
+            <input type="text" name="email" placeholder="Your email..." class="email-input">
+            <input type="text" name="text" class="text-input">
+            <button type="submit">Send message</button>
+            </form>
+          </div>    
         </div>
       </div>
     </section>
@@ -51,14 +48,14 @@
       </h4>
       <p>Curabitur blandit tempus porttitor. Vollis ac inceptos mollisestor commodo luctus. Curabitur blandit <br> tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
       <div class="foto-cards">
-        <img src="./assets/foto1.png" alt="foto 1">
-        <img src="./assets/foto2.png" alt="foto 2">
-        <img src="./assets/foto3.png" alt="foto 3">
-        <img src="./assets/foto4.png" alt="foto 4">
-        <img src="./assets/foto5.png" alt="foto 5">
-        <img src="./assets/foto6.png" alt="foto 6">
-        <img src="./assets/foto7.png" alt="foto 7">
-        <img src="./assets/foto8.png" alt="foto 8">
+        <img src="./assets/foto1.png" alt="foto 1" class="card-image1">        
+        <img src="./assets/foto2.png" alt="foto 2" class="card-image2">
+        <img src="./assets/foto3.png" alt="foto 3" class="card-image3">
+        <img src="./assets/foto4.png" alt="foto 4" class="card-image4">
+        <img src="./assets/foto5.png" alt="foto 5" class="card-image5">
+        <img src="./assets/foto6.png" alt="foto 6" class="card-image6">
+        <img src="./assets/foto7.png" alt="foto 7" class="card-image7">
+        <img src="./assets/foto8.png" alt="foto 8" class="card-image8">
       </div>
     </section>
   </main>
@@ -77,5 +74,6 @@
       <p>All rights reserved. “World Photos”, Inc</p>
     </div>
   </footer>
+  <script src="./script.js"></script>
 </body>
 </html>

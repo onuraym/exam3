@@ -202,7 +202,7 @@ hr {
   grid-column-gap: 20.35px;
   grid-row-gap: 20.35px;
 }
-.modal-overlay2 {
+/* .modal-overlay_foto {
   position: fixed;
 	left: 0;
 	top: 0;
@@ -255,9 +255,8 @@ hr {
 .big-image {
   width: 500px;
   height: 500px;
-}
+} */
 .footer-content {
-  /* height: 205px; */
   background-color: var(--blue-color);
   padding: 0;
   margin: 0;
@@ -374,7 +373,6 @@ hr {
     display: block;
     padding: 50px 17px 0px 17px;
     margin: 0;
-    /* text-align: justify; */
   }
   .image {
     width: 341px;
